@@ -9,6 +9,7 @@
 		}
 	],
 	"start_url": "/",
+	"scope": "/khrissbox/",
 	"background_color": "#f44",
 	"theme_color": "#f44",
 	"display": "standalone"
