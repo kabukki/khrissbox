@@ -1,5 +1,7 @@
 body {
 	margin: 0;
+	font-family: sans-serif;
+
 }
 
 header {
@@ -24,7 +26,13 @@ main button {
 	height: 100px;
 	cursor: pointer;
 	outline: none;
-	border: 3px solid #000;
+	border: 3px solid #222;
 	background-color: #f44;
 	margin: 10px;
+	font-size: 18px;
+	transition: transform .1s;
+}
+
+main button:hover {
+	transform: scale(.95);
 }
