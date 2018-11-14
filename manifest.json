@@ -1,0 +1,15 @@
+{
+	"short_name": "Khrissbox",
+	"name": "Khissbox",
+	"icons": [
+		{
+			"src": "assets/img/logo512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"start_url": "/",
+	"background_color": "#f44",
+	"theme_color": "#f44",
+	"display": "standalone"
+}
