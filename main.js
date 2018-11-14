@@ -36,7 +36,7 @@ const main = document.querySelector('main');
 if ('serviceWorker' in navigator) {
 	window.addEventListener('load', async _ => {
 		try {
-			const registration = await navigator.serviceWorker.register('/sw.js')
+			const registration = await navigator.serviceWorker.register('./sw.js')
 			console.log(registration);
 		} catch (err) {
 			console.log(err.message);
