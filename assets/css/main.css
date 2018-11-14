@@ -26,5 +26,5 @@ main button {
 	outline: none;
 	border: 3px solid #000;
 	background-color: #f44;
-	padding: 10px;
+	margin: 10px;
 }
