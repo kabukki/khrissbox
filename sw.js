@@ -1,7 +1,7 @@
 const cacheWhitelist = ['v1'];
 const filesToCache = [
-	'/assets/',
-	'/assets/sfx/',
+	'/khrissbox/',
+	'/khrissbox/assets/sfx/',
 ];
 
 // On installation, add assets to cache
