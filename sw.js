@@ -1,6 +1,6 @@
 const cacheWhitelist = ['v1'];
 const filesToCache = [
-	'/',
+	'/khrissbox/index.html',
 	// '/khrissbox/assets/sfx/',
 ];
 
