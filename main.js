@@ -65,7 +65,7 @@ if ('serviceWorker' in navigator) {
 		try {
 			const registration = await navigator.serviceWorker.register('/khrissbox/sw.js', {
 				scope: '/khrissbox/'
-			})
+			});
 			console.log(registration);
 		} catch (err) {
 			console.log(err.message);
