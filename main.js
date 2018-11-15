@@ -1,14 +1,41 @@
 const SFX_PATH_BASE = 'assets/sfx';
 const SFX = {
-	allo: 3,
-	correc: 7,
-	csharp: 1,
-	donc: 9,
-	euh: 16,
-	hein: 2,
-	ok: 5,
-	pistolet: 10,
-	regardez: 4
+	allo: {
+		text: 'Allo',
+		samples: 3
+	},
+	correc: {
+		text: 'C\'est correc',
+		samples: 7
+	},
+	csharp: {
+		text: 'C#',
+		samples: 1
+	},
+	donc: {
+		text: 'Donc',
+		samples: 9
+	},
+	euh: {
+		text: 'Euuuh',
+		samples: 16
+	},
+	hein: {
+		text: 'Hein ?',
+		samples: 2
+	},
+	ok: {
+		text: 'OK',
+		samples: 5
+	},
+	pistolet: {
+		text: 'Pistolet',
+		samples: 10
+	},
+	regardez: {
+		text: 'Regardez !',
+		samples: 4
+	}
 };
 
 /**
@@ -26,7 +53,7 @@ function getRandomNumber (min, max) {
  */
 function getSFXPath (name) {
 	if (!(name in SFX)) throw new Error(`Unknown SFX: ${name}`);
-	return SFX_PATH_BASE + '/' + name + '/' + getRandomNumber(1, SFX[name]) + '.wav';
+	return SFX_PATH_BASE + '/' + name + '/' + getRandomNumber(1, SFX[name].samples) + '.wav';
 }
 
 const audio = new Audio();
@@ -47,11 +74,11 @@ if ('serviceWorker' in navigator) {
 }
 
 // Create buttons
-for (const sfx in SFX) {
+for (const [name, sfx] of Object.entries(SFX)) {
 	const button = document.createElement('button');
-	button.innerText = `${sfx} (${SFX[sfx]})`;
+	button.innerText = `${sfx.text} (${sfx.samples})`;
 	button.addEventListener('click', _ => {
-		audio.src = getSFXPath(sfx);
+		audio.src = getSFXPath(name);
 		console.log(audio.src);
 		audio.play();
 	});
